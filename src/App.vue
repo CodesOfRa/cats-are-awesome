@@ -1,78 +1,33 @@
 <template>
-  <div id="app">
+  <div class="main-box">
+    <!-- <Stars :max="5" :level="3"></Stars> -->
+    <!-- <ui5-messagestrip type="Information" @click.prevent="handleClick">Information MessageStrip</ui5-messagestrip>
+    <a @click.once="handleClick($event)">TEST</a>-->
     <ui5-shellbar :primary-title="title"></ui5-shellbar>
     <ButtonGroup
       @like="addLikeCat(cat)"
       @unlike="addUnlikeCat(cat)"
     ></ButtonGroup>
     <!-- TODO: make a component of this -->
-    <div>
-      <img :src="cat.url" class="cat-card" />
-      <span>{{ cat.breeds[0].name }}</span>
-    </div>
-    <!-- TODO: make this a component -->
-    <span>👍</span>
-    <ui5-card
-      avatar="sap-icon://group"
-      heading="Team Space"
-      subtitle="Direct Reports"
-      status="3 of 10"
-      class="medium"
-    >
-      <div class="card-content">
-        <ui5-list
-          separators="None"
-          class="card-content-child"
-          style="width: 100%"
-        >
-          <ui5-li
-            v-for="i in like"
-            :key="i.id"
-            :image="i.url"
-            :description="i.breeds[0].name"
-            >{{ i.breeds[0].name }}</ui5-li
-          >
-        </ui5-list>
-      </div>
-    </ui5-card>
-    <!-- TODO:make this a component -->
-    <span>👎</span>
-    <ui5-card
-      avatar="sap-icon://group"
-      heading="Team Space"
-      subtitle="Direct Reports"
-      status="3 of 10"
-      class="medium"
-    >
-      <div class="card-content">
-        <ui5-list
-          separators="None"
-          class="card-content-child"
-          style="width: 100%"
-        >
-          <ui5-li
-            v-for="i in unlike"
-            :key="i.id"
-            :image="i.url"
-            :description="i.breeds[0].name"
-            >{{ i.breeds[0].name }}</ui5-li
-          >
-        </ui5-list>
-      </div>
-    </ui5-card>
+    <CatCard :cat="cat"></CatCard>
+    <LikesCard :like="like" :unlike="unlike"></LikesCard>
   </div>
 </template>
 
 <script>
 import "@ui5/webcomponents/dist/ShellBar";
+import "@ui5/webcomponents/dist/MessageStrip";
+
 import ButtonGroup from "./components/GroupButtons";
+import LikesCard from "./components/LikesCard";
+import CatCard from "./components/CatCard";
 
 import axios from "axios";
 
 axios.defaults.headers.common["x-api-key"] = process.env.VUE_APP_API_KEY;
 export default {
   name: "app",
-  components: { ButtonGroup },
+  components: { ButtonGroup, CatCard, LikesCard },
   data() {
     return {
       title: "Cats are fun",
@@ -83,7 +38,6 @@ export default {
     };
   },
   mounted() {
-    // this.newCat();
     //get all breeds information at once;
     this.getBreeds();
   },
@@ -97,28 +51,23 @@ export default {
           this.cat = data[data.length - 1];
         });
     },
+    handleClick() {
+      console.log("🌟");
+    },
     addLikeCat(cat) {
-      const breed = this.returnBreed(cat);
       //add the cat to the liked list
-      this.like.push({ ...cat, ...breed });
+      this.like.push(cat);
       //generate a new cat object
       this.newCat();
     },
 
     addUnlikeCat(cat) {
-      const breed = this.returnBreed(cat);
       //add the cat to the not so nice list :)
-      this.unlike.push({ ...cat, ...breed });
+      this.unlike.push(cat);
       //generate a new cat object
       this.newCat();
     },
-    returnBreed(cat) {
-      return this.breeds.find(data => {
-        if (data.id === cat.id) {
-          return data;
-        }
-      });
-    },
+
     getBreeds() {
       var url = "https://api.thecatapi.com/v1/breeds";
       axios.get(url).then(response => {
@@ -136,6 +85,14 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  margin: 0;
+}
+.main-box {
+  display: flex;
+  flex-flow: column;
+  align-items: CENTER;
+}
 .cat-card {
   max-width: 400px;
 }

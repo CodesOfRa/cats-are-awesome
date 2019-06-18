@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="buttons-box">
     <ui5-button icon="sap-icon://thumb-up" @click="onLike">Like</ui5-button>
     <ui5-button icon="sap-icon://thumb-down" type="Negative" @click="onUnLike"
       >Not really</ui5-button
@@ -19,3 +19,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+.buttons-box {
+  margin: 1rem;
+}
+</style>

@@ -683,25 +683,25 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
 
-"@ui5/webcomponents-base@0.11.1":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@ui5/webcomponents-base/-/webcomponents-base-0.11.1.tgz#461be944cc593d501532231a8542a1b95a18a935"
+"@ui5/webcomponents-base@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@ui5/webcomponents-base/-/webcomponents-base-0.12.0.tgz#5b382fdbac4b5b839452f1df4e4376aee309a7dc"
   dependencies:
-    "@ui5/webcomponents-core" "0.11.1"
+    "@ui5/webcomponents-core" "0.12.0"
     lit-html "^1.0.0"
     regenerator-runtime "0.12.1"
     url-search-params-polyfill "^5.0.0"
 
-"@ui5/webcomponents-core@0.11.1":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@ui5/webcomponents-core/-/webcomponents-core-0.11.1.tgz#fb494fb755656eae17e23fb88dd5edefccdac746"
+"@ui5/webcomponents-core@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@ui5/webcomponents-core/-/webcomponents-core-0.12.0.tgz#aee3bd66c014387f02c8bafa5aa8e29ef950786e"
 
-"@ui5/webcomponents@^0.11.0":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@ui5/webcomponents/-/webcomponents-0.11.1.tgz#2d42294578d75cc201ae479a53a250143d255398"
+"@ui5/webcomponents@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@ui5/webcomponents/-/webcomponents-0.12.0.tgz#98da24c74b409cb0eaaf1001983f30a5ece8dd3f"
   dependencies:
-    "@ui5/webcomponents-base" "0.11.1"
-    "@ui5/webcomponents-core" "0.11.1"
+    "@ui5/webcomponents-base" "0.12.0"
+    "@ui5/webcomponents-core" "0.12.0"
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
