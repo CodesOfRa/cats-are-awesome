@@ -22,5 +22,8 @@ export default {
 <style scoped>
 .buttons-box {
   margin: 1rem;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
 }
 </style>

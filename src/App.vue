@@ -85,6 +85,16 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "72-Regular";
+  src: url("assets/fonts/72-Regular.woff") format("woff"),
+    url("assets/fonts/72-Regular.woff2") format("woff2"),
+    url("https://openui5nightly.hana.ondemand.com/resources/sap/ui/core/themes/sap_belize/fonts/72-Regular.woff")
+      format("woff"),
+    url("https://openui5nightly.hana.ondemand.com/resources/sap/ui/core/themes/sap_belize/fonts/72-Regular.woff2")
+      format("woff2"),
+    local("72-Regular");
+}
 body {
   margin: 0;
 }
@@ -92,8 +102,5 @@ body {
   display: flex;
   flex-flow: column;
   align-items: CENTER;
-}
-.cat-card {
-  max-width: 400px;
 }
 </style>

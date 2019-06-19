@@ -30,6 +30,8 @@ export default {
 }
 .cat-card-box img {
   box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  max-height: 250px;
 }
 .cat-card-box span {
   background: linear-gradient(

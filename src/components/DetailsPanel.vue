@@ -8,30 +8,30 @@
       :color-scheme="key + 1"
       >{{ i }}</ui5-badge
     >
-    <div>{{ cat.description }}</div>
+    <div class="details-box-description">{{ cat.description }}</div>
 
     <div>
-      <span>Origin :</span>
+      <span>Origin</span>
       {{ cat.origin }}
     </div>
     <div>
-      <span>Life Span :</span>
-      {{ cat.life_span }}
+      <span>Life Span</span>
+      {{ cat.life_span }} years
     </div>
     <div class="level-box">
-      <span>Energy Level :</span>
+      <span>Energy Level</span>
       <Stars :max="5" :level="cat.energy_level"></Stars>
     </div>
     <div class="level-box">
-      <span>Adaptability :</span>
+      <span>Adaptability</span>
       <Stars :max="5" :level="cat.adaptability"></Stars>
     </div>
     <div class="level-box">
-      <span>Dog Friendly :</span>
+      <span>Dog Friendly</span>
       <Stars :max="5" :level="cat.dog_friendly"></Stars>
     </div>
     <div class="level-box">
-      <span>Social Needs :</span>
+      <span>Social Needs</span>
       <Stars :max="5" :level="cat.social_needs"></Stars>
     </div>
   </div>
@@ -54,8 +54,35 @@ export default {
 <style scoped>
 .details-box {
   max-width: 700px;
+  padding: 1rem;
 }
+.details-box div,
+h3 {
+  font-family: "72-Regular";
+}
+.details-box div {
+  color: #6a6d70;
+}
+.details-box span {
+  color: black;
+  width: 110px;
+  padding-right: 0.5rem;
+}
+.details-box > div:last-child {
+  padding-bottom: 1rem;
+}
+
+.details-box-description {
+  padding: 0.8rem 0rem;
+  color: #6a6d70;
+}
+
 .level-box {
   display: flex;
+  color: #6a6d70;
+}
+
+.level-box > span {
+  max-width: 200px;
 }
 </style>

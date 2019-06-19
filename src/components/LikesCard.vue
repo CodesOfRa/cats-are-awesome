@@ -28,7 +28,7 @@
       <!-- UNLIKE -->
       <ui5-card
         avatar="sap-icon://thumb-down"
-        heading="They are still cute but I don't like them"
+        heading="I don't like these ones"
         subtitle="Here is a list of them"
         :status="unlike.length + ` 😾`"
         class="medium"
@@ -42,6 +42,7 @@
               :key="i.id"
               :image="i.url"
               :description="i.breeds[0].temperament"
+              @click="onSelectCat(i)"
               >{{ i.breeds[0].name }}</ui5-li
             >
           </ui5-list>

@@ -1,8 +1,14 @@
 <template>
   <div class="stars-box">
     <div v-for="(i, key) in values" :key="'id_' + key">
-      <ui5-icon v-if="i === 1" src="sap-icon://favorite"></ui5-icon>
-      <ui5-icon v-else src="sap-icon://unfavorite"></ui5-icon>
+      <ui5-icon
+        v-if="i === 1"
+        src="sap-icon://favorite"
+        style="color:#FFC900"
+      ></ui5-icon>
+      <ui5-icon v-else src="sap-icon://unfavorite" style="color:#FFC900"
+        >></ui5-icon
+      >
     </div>
   </div>
 </template>
