@@ -9,7 +9,7 @@
       >{{ i }}</ui5-badge
     >
     <div class="details-box-description">{{ cat.description }}</div>
-
+    <ui5-link :href="cat.wikipedia_url" target="_blank">Read more ...</ui5-link>
     <div>
       <span>Origin</span>
       {{ cat.origin }}
@@ -38,6 +38,7 @@
 </template>
 <script>
 import "@ui5/webcomponents/dist/Badge";
+import "@ui5/webcomponents/dist/Link";
 
 import Stars from "./Stars";
 export default {
@@ -46,7 +47,7 @@ export default {
   props: ["cat"],
   computed: {
     temperament() {
-      return this.cat.temperament.split(",");
+      return this.cat.temperament ? this.cat.temperament.split(",") : "";
     }
   }
 };
