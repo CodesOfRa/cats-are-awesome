@@ -1,4 +1,9 @@
-# cats-list
+# Cats are awesome 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ea8b91e9-daa0-4e65-93ee-c755efa42974/deploy-status)](https://app.netlify.com/sites/cats-are-awesome/deploys)
+Demo from UI5 Conf 2019 using UI5 Web Components and Vue. 
+
+You can run the application from [here](https://cats-are-awesome.netlify.com/)
 
 ## Project setup
 ```
@@ -33,5 +38,3 @@ npm run test:unit
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
