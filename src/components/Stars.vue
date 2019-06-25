@@ -6,9 +6,11 @@
         src="sap-icon://favorite"
         style="color:#FFC900"
       ></ui5-icon>
-      <ui5-icon v-else src="sap-icon://unfavorite" style="color:#FFC900"
-        >></ui5-icon
-      >
+      <ui5-icon
+        v-else
+        src="sap-icon://unfavorite"
+        style="color:#FFC900"
+      ></ui5-icon>
     </div>
   </div>
 </template>

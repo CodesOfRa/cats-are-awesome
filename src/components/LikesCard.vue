@@ -32,7 +32,7 @@
         subtitle="Here is a list of them"
         :status="unlike.length + ` 😾`"
         class="medium"
-        v-show="like.length !== 0"
+        v-show="unlike.length !== 0"
         style="width:50%"
       >
         <div class="card-content">
@@ -49,8 +49,7 @@
         </div>
       </ui5-card>
     </div>
-    <!-- sap-icon://favorite -->
-    <!-- sap-icon://unfavorite -->
+
     <DetailsPanel v-show="openDetails" :cat="selectedCat"></DetailsPanel>
   </div>
 </template>

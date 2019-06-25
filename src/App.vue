@@ -3,7 +3,7 @@
     <!-- <Stars :max="5" :level="3"></Stars> -->
     <!-- <ui5-messagestrip type="Information" @click.prevent="handleClick">Information MessageStrip</ui5-messagestrip>
     <a @click.once="handleClick($event)">TEST</a>-->
-    <ui5-shellbar :primary-title="title"></ui5-shellbar>
+    <ui5-shellbar :primary-title="title" />
     <ButtonGroup
       @like="addLikeCat(cat)"
       @unlike="addUnlikeCat(cat)"
