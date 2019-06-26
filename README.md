@@ -1,10 +1,13 @@
-# Cats are awesome 
+# Cats are awesome 😻
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ea8b91e9-daa0-4e65-93ee-c755efa42974/deploy-status)](https://app.netlify.com/sites/cats-are-awesome/deploys)
-Demo from UI5 Conf 2019 using UI5 Web Components and Vue. 
 
-You can run the application from [here](https://cats-are-awesome.netlify.com/)
+The code for my demo from **UI5Con** 2019 using **UI5 Web Components and Vue**. 
 
+🚀You can run the live application from [here](https://cats-are-awesome.netlify.com/)
+
+
+🎨You can find the presentation [here](https://slides.com/codesofra/ui5-webcomponents-and-vue#/)
 ## Project setup
 ```
 npm install

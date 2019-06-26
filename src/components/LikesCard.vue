@@ -65,10 +65,9 @@ export default {
   },
   methods: {
     onSelectCat(cat) {
-      console.log(cat);
       this.openDetails = true;
       const { breeds } = cat;
-      console.log(breeds);
+
       if (breeds != undefined) {
         this.selectedCat = breeds[breeds.length - 1];
       }

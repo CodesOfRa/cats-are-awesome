@@ -19,9 +19,7 @@ import "@ui5/webcomponents/dist/Icon";
 export default {
   name: "star",
   props: ["max", "level"],
-  mounted() {
-    console.log("BAL");
-  },
+  mounted() {},
   computed: {
     values() {
       var value = Array(this.max).fill(1);
